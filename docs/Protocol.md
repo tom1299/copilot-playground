@@ -62,6 +62,25 @@ No sandbox option
   If you want to fully block network access to certain URLs in all modes, you'd need OS/firewall-level controls or use --deny-tools bash to disable shell access altogether.
 ```
 
+### Apparently flags are converted to system prompts
+`I can see from my system prompt and from the earlier bash attempt that shell commands are blocked.`
+
+### Disabled google.com and web-fetch tool
+```
+❯ Use the web_fetch tool to access the content under https://google.com
+
+◐ The user wants me to fetch https://google.com using the web_fetch tool.
+
+✗ Fetching web content: https://google.com
+  Permission to access this URL was denied.
+
+● Access to https://google.com was denied. The web_fetch tool has URL restrictions in this environment — certain domains (like google.com) are blocked. It works best for fetching documentation, GitHub pages, and other developer resources.
+```
+
+### ⚠️ `fetch_web` tool might not be disallowed by `--deny-tools` flag
+https://github.com/orgs/community/discussions/189107
+Discussion above is an example of AI chatbots producing ai-slur.
+
 ### Use docker sandboxes
 See https://docs.docker.com/ai/sandboxes/
 TODO: Do this example: https://docs.docker.com/ai/sandboxes/agents/copilot/
