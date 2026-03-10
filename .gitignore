@@ -1,2 +1,4 @@
 .idea/
 logs/*.log
+config/session-state/*
+config/logs/*

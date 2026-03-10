@@ -1,3 +1,14 @@
+## Conclusions / next steps
+### Conclusions:
+- MCP Server configuration is only working in user home config
+- No configuration option for starting Copilot CLI with mcp servers disabled
+    - => Use `--disable-builtin-mcps` flag to disable builtin mcp servers
+- `--deny-url` not working for fetch_web tool
+### Next steps:
+- Use cli with docker sandbox for the time being
+- Monitor the issue regarding `--deny-url` and `fetch_web` tool
+
+
 ### Interesting flags for Copilot CLI:
 ```
 --no-experimental
@@ -80,6 +91,23 @@ No sandbox option
 ### ⚠️ `fetch_web` tool might not be disallowed by `--deny-tools` flag
 https://github.com/orgs/community/discussions/189107
 Discussion above is an example of AI chatbots producing ai-slur.
+My mistake: Wrong discussion forum. New discussion:
+https://github.com/github/copilot-cli/discussions/1950
+
+## Try to disable all mcp servers via config file
+Prompt:
+```
+Given I want to start the copilot cli with all mcp servers and build in mcp servers disabled. What would the configuration file look like ?
+```
+Wrong answer:
+```
+{
+  "mcp": {
+    "servers": {},
+    "disableBuiltinServers": true
+  }
+}
+```
 
 ### Use docker sandboxes
 See https://docs.docker.com/ai/sandboxes/
