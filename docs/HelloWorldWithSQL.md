@@ -1,6 +1,6 @@
 ## Copilot session protocol
 See also https://gist.github.com/tom1299/6de030515c438428832c8022bdd4f7cd
-Hallucination example. No SQL mentioned. Hello world skill: Just call a script.
+Agent pondering about when to update the todo list...
 ```
 $ copilot 
 ╭──────────────────────────────────────────────────────────────────────────────────────────────────╮
